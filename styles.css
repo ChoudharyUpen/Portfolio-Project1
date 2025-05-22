@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.vertically-section {
+    /* background-color: #a9a9a9; */
+    background-color: hsl(240deg 1.64% 11.96%); 
+    /* background-color:#Efd0ac; */
+    color: white;
+    padding: 40px;
+    height: 90vh; /* Taller height */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligning content from the top */
+    text-align: center;
+    border-radius: 10px;
+    position: relative; 
+    /* Allows for more control over positioning */
+   overflow: hidden;
+}
+
+/* Image Container - Adds space at the top */
+.image-container {
+    margin-top: 20px; /* This ensures image is not touching the top */
+    display: flex;
+    justify-content: center;
+}
+
+/* Image Styling */
+.vertically-section img {
+    max-width: 100px; /* Resize the image */
+    height: auto;
+}
+
+/* Heading and Paragraph */
+.vertically-section h2 {
+    margin-top: 10px; /* Space between the image and text */
+}
+
+.vertically-section p {
+    margin-top: 10px;
+}
+
+.separator {
+    border: none; /* Remove default border */
+    height: 2px; /* Thickness of the line */
+    background-color: white; /* Line color */
+    width: 90%; /* Adjust the width */
+    margin: 20px auto; /* Center the line and add spacing */
+}
+
+
+
+.square-section { 
+    background-color: hsl(240deg 1.64% 11.96%); 
+    color: white;
+    padding: 25px;
+    width: 130vh; 
+    height: 90vh;
+    border-radius: 10px;
+    /* margin-top: 15px; Add space between the navbar and content */
+}
+.square-section  {
+    overflow: scroll;  /* Enable scrolling */
+    -ms-overflow-style: none;  /* Hide scrollbar in IE/Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+  }
+  
+  .square-section ::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar in Chrome/Safari */
+  }
+  
+
+
+.square-section h1 {
+    margin-bottom: 20px; 
+  }
+  
+
+
+.email-section {
+    display: flex;
+    align-items: center; /* Vertically align the items */
+    gap: 10px; /* Adds space between the SVG and the text */
+    margin-top: 20px; /* Optional: Add space above the email section */
+}
+
+.email-section img {
+    width: 40px; /* Adjust the size of the SVG */
+    height: 40px;
+}
+
+.email-text h3 {
+    margin: 0; /* Remove extra margins */
+    font-size: 14px; /* Adjust as needed */
+    font-weight: bold;
+}
+
+.email-text h5 {
+    margin: 0;
+    font-size: 16px; /* Adjust as needed */
+    color: #555; /* Optional: Adjust text color */
+}
+.email-text h5 a {
+    text-decoration: none; /* Remove underline */
+    color: #007BFF; /* Make it look like a link */
+}
+
+.email-text h5 a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+
+
+.webd-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.webd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid hsl(240deg 1.64% 11.96%);
+    padding: 20px;
+    background-color: #412222;
+    border-radius: 26px;
+    color: white;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    gap: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.webd:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.webd .icon {
+    flex-shrink: 0;
+}
+
+.webd img {
+    display: block;
+    max-width: 80px;
+    height: auto;
+}
+
+.webd .content {
+    text-align: center;
+}
+
+.webd h1 {
+    font-size: 16px;
+    margin: 0;
+    color: hsl(50deg 100% 70%);
+}
+
+.webd p {
+    font-size: 12px;
+    margin: 8px 0 0;
+    line-height: 1.4;
+}
+
+
+  
+
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  
+  .navbar .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+
+
+
+
+  /* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+form button {
+    background: #00bcd4;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form button:hover {
+    background: #008c9e;
+}
+
+
+.project {
+    flex: 1 1 300px; /* Grow, shrink, and set base width to 300px */
+    border: 3px solid #f4f1f1;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center-align items */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px;
+}
+
+.technologies h2 {
+    background-color: #cf5858; /* Light grey background */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.technologies h2:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: #99ec82; /* Change background color on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Resume Section Styling */
+#resume {
+    background: linear-gradient(135deg, #1e1e2f, #2b2b44); /* Gradient background for a premium look */
+    color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 50px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Resume Heading */
+#resume h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcc00;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#resume h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffcc00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Resume Paragraph */
+#resume p {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Resume List Styling */
+#resume ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+#resume ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #e0e0e0;
+}
+
+#resume ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #ffcc00;
+    font-size: 1.5rem;
+}
+
+/* Sub-list styles */
+#resume ul ul {
+    padding-left: 20px;
+}
+
+#resume ul ul li::before {
+    content: '•';
+    font-size: 1.3rem;
+    color: #ffcc00;
+}
+
+/* Resume Download Section */
+#resume a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#resume a img {
+    width: 80px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+#resume a:hover {
+    color: #fff;
+}
+
+#resume a:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Details Styling */
+#resume ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#resume ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #resume {
+        padding: 30px;
+    }
+
+    #resume h2 {
+        font-size: 2rem;
+    }
+
+    #resume p {
+        font-size: 1rem;
+    }
+
+    #resume ul li {
+        font-size: 1rem;
+    }
+
+    #resume a {
+        font-size: 1rem;
+    }
+}
+
+
+.download-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 16px; /* Font size */
+    padding: 15px 32px; /* Padding for larger button */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.download-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.download-btn:active {
+    transform: scale(1); /* Button returns to normal size on click */
+    background-color: #388e3c; /* Even darker green when clicked */
+}
+
+/* for making open source svg white */
+#opensource{
+    filter: brightness(0) invert(1);
+}
+
+
+/* code for making this website responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .vertically-section, .square-section {
+        width: 90%;
+        height: auto;
+    }
+}
