@@ -3,225 +3,350 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Upen Choudhary - Full Stack Developer Portfolio"
-    />
-    <title>Upen Choudhary | Portfolio</title>
+    <meta name="description" content="Upen Choudhary - Full Stack Developer Portfolio" />
+    <title>Upen Choudhary | Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-
   <body>
-    <div class="container">
-      <section class="vertically-section">
-        <div class="image-container">
-          <img src="./images/avatar-1.png" alt="" />
-        </div>
-        <h2>Upen Choudhary</h2>
-        <h5>Web Developer</h5>
-        <hr class="separator" />
-        <div class="email-section">
-          <img src="./svg/location.svg" alt="Email Icon" />
-          <div class="email-text">
-            <h3>Location</h3>
-            <h5>
-              <a href="mailto:upenchoudhary100@gmail.com">Mathura,India</a>
-            </h5>
-          </div>
-        </div>
-        <div class="email-section">
-          <img src="./svg/phone.svg" alt="Email Icon" />
-          <div class="email-text">
-            <h3>Phone</h3>
-            <h5>
-              <a href="mailto:upenchoudhary100@gmail.com">(+91) 7248119519</a>
-            </h5>
-          </div>
-        </div>
-        <div class="email-section">
-          <img src="./svg/email.svg" alt="Email Icon" />
-          <div class="email-text">
-            <h3>EMAIL</h3>
-            <h5>
-              <a href="mailto:upenchoudhary100@gmail.com"
-                >upenchoudhary100@gmail.com</a
-              >
-            </h5>
-          </div>
-        </div>
-      </section>
+    <canvas id="bg-canvas"></canvas>
+    <div class="cursor-glow" id="cursor-glow"></div>
 
-      <section class="square-section" id="app">
-        <nav class="navbar">
-          <div class="logo">
-            <!-- <a href="#">About Me</a> -->
-            <a href="#">‎ </a>
+    <div class="layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-inner">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring-outer"></div>
+            <div class="avatar-ring-inner"></div>
+            <img src="./images/avatar-1.png" alt="Upen Choudhary" class="avatar-img" />
+            <span class="avatar-status-dot"></span>
           </div>
 
-          <ul class="nav-links">
-            <li><a href="#" onclick="navigate('about')">About</a></li>
-            <li><a href="#" onclick="navigate('project')">Project</a></li>
-            <li><a href="#" onclick="navigate('resume')">Resume</a></li>
-            <li><a href="#" onclick="navigate('contact')">Contact</a></li>
-          </ul>
+          <h1 class="sidebar-name">Upen Choudhary</h1>
+          <div class="typing-wrap">
+            <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
+          </div>
+
+          <div class="sidebar-divider"></div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon-box"><img src="./svg/location.svg" alt="Location" /></div>
+              <div class="contact-details">
+                <span class="contact-label">Location</span>
+                <span class="contact-val">Mathura, India</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-box"><img src="./svg/phone.svg" alt="Phone" /></div>
+              <div class="contact-details">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+917248119519" class="contact-val">(+91) 7248119519</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-box"><img src="./svg/email.svg" alt="Email" /></div>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <a href="mailto:upenchoudhary100@gmail.com" class="contact-val">upenchoudhary100@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-divider"></div>
+
+          <div class="social-row">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:upenchoudhary100@gmail.com" class="social-btn" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN PANEL -->
+      <main class="main-panel">
+
+        <nav class="navbar" id="navbar">
+          <div class="nav-pill" id="nav-pill"></div>
+          <button class="nav-btn active" data-route="about" onclick="navigate('about')">About</button>
+          <button class="nav-btn" data-route="project" onclick="navigate('project')">Projects</button>
+          <button class="nav-btn" data-route="resume" onclick="navigate('resume')">Resume</button>
+          <button class="nav-btn" data-route="contact" onclick="navigate('contact')">Contact</button>
         </nav>
 
-        <section id="content">
-          <div class="about active">
-            <p>
-              I'm a Web Developer and B.Tech Computer Science student from
-              India...
-            </p>
-          </div>
-        </section>
-      </section>
-    </div>
+        <div class="sections-wrap">
 
-    <script>
-      const routes = {
-        about: `
-<h1 style="font-family: 'Cursive',margin-top: 20px;"> I'm a Web Developer and B.Tech Computer Science student from India  After visiting Resume Section you can download my resume</h1>
-<h1 style="font-family: 'Cursive',margin-top: 20px;">What I am Doing :------</h1>
-
-               <div class="webd-container">
-    <section class="webd">
-        <img src="./svg/web-development.svg" alt="Web Development Icon" width="90" height="80">
-        <h1>Web Development</h1>
-     
-    </section>
-    <section class="webd">
-        <img src="./svg/Java.svg" alt="Web Development Icon" width="90" height="80">
-        <h1>Dsa in JAVA</h1>
-      
-    </section>
-    <section class="webd">
-        <img src="./svg/open source.svg" alt="Web Development Icon" width="90" height="80"  id="opensource">
-        <h1>Contribution </h1>
-       
-    </section>
-</div>
-
-<h1 style="font-family: 'Cursive',margin-top: 20px;">Technologies</h1>
-             
-
-<div class="technologies">
-     <h2>JavaScript</h2>
-    <h2>Tailwind</h2>
-    <h2>Bootstrap</h2>
-    <h2>React</h2>
-    <h2>Node JS</h2>
-    <h2>Express</h2>
-    <h2>MongoDB</h2>
-    <h2>Git/GitHub</h2>
-</div>
-
-            `,
-
-        project: `
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div class="project">
-        <h2>Project 1: VideoConferencing</h2>
-         
-       <a href="https://web-rtc-client-repo.vercel.app/" target="_blank">
-        <img src="./images/video.png" alt="Project 1 Image" style="max-width: 100%; height: auto;">
-       </a>
-    </div>
-    <div class="project">
-        <h2>Project 2: Trading Platform</h2>
-       <a href="https://zerodha-frontend-repo.vercel.app/" target="_blank">
-        <img src="./images/Trading.jpg" alt="Project 2 Image" style="max-width: 100%; height: auto;">
-       </a>
-    </div>
-    <div class="project">
-        <h2>Project 3: Chat App</h2>
-        <a href="https://chat-frontend-repo.vercel.app" target="_blank">
-        <img src="./images/chat.jpg" alt="Project 3 Image" style="max-width: 100%; height: auto;">
-      </a>
-    </div>
-</div>
-`,
-
-        resume: `
-    <section id="resume" class="section">
-    <h2>My Resume</h2>
-    <p>Click the button below to download my resume.</p>
-    <a href="assets/resume.pdf" download="My_Resume.pdf">
-        <button class="download-btn">Download Resume</button>
-    </a>
-</section>
-
-<section id="resume">
-    <h2>My Resume</h2>
-    <p>
-        I am <strong>Upen Choudhary</strong>, a B.Tech Computer Science student with a strong foundation in software development, problem-solving, and cutting-edge web technologies. Below is an overview of my qualifications:
-    </p>
-    <ul>
-        <li><strong>Education:</strong> B.Tech in Computer Science, <em>GLA University</em> (2022-2026)</li>
-        <li><strong>Technical Skills:</strong> JavaScript, React, Node.js, Express.js, MongoDB, Git/GitHub</li>
-        <li><strong>Certifications:</strong>
-            <ul>
-                <li>DSA & Development – Apna College</li>
-                <li>Software Engineering – NPTEL</li>
-            </ul>
-        </li>
-        <li><strong>Projects:</strong>
-            <ul>
-<li><strong>Video Conferencing:</strong> Developed a real-time video conferencing application with secure peer-to-peer communication.</li> 
-<li><strong>Trading Platform:</strong> Built a trading platform that provides real-time market data and seamless transaction processing.</li>
-<li><strong>Chat App:</strong> Created a real-time chat app using Node.js, Express, Socket.io, and MongoDB. Features
-custom chat rooms, instant messaging, and a user-friendly interface.
-</li>
-           
-            </ul>
-        </li>
-        <li><strong>Languages:</strong> Fluent in Hindi and English</li>
-        <li><strong>Contact:</strong> 
-            <ul>
-                <li>Email: <a href="mailto:upenchoudhary100@gmail.com">upenchoudhary100@gmail.com</a></li>
-                <li>Phone: <a href="tel:+917248119519">+91 7248119519</a></li>
-            </ul>
-        </li>
-    </ul>  
-</section>
-`,
-
-        contact: `
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                
-                 <!-- 
-        Here Using Formspree API to send form data directly to your email.
-        I have registered on FormSpree.com website using chaudharyuday1515@gmail.com account.
-        -->
-
-
-                <form action="https://formspree.io/f/xdkelwyo" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+          <!-- ABOUT -->
+          <section class="page-section active" id="sec-about">
+            <div class="section-header">
+              <h2 class="section-title">About <span class="accent">Me</span></h2>
+              <div class="title-underline"></div>
             </div>
-        </section>
-    `,
-      };
+            <div class="about-bio">
+              <p>
+                Hey! I'm <strong>Upen Choudhary</strong> &mdash; a passionate Full Stack Developer and B.Tech Computer Science student at <strong>GLA University</strong> (2022&ndash;2026). I build fast, scalable web applications and love turning complex ideas into clean, elegant code.
+              </p>
+              <p>
+                I specialise in the <strong>MERN stack</strong>, real-time systems with Socket.io, and peer-to-peer communication via WebRTC. Always learning, always shipping.
+              </p>
+            </div>
 
-      // Function to navigate between sections
-      function navigate(route) {
-        const contentSection = document.getElementById("content");
-        contentSection.innerHTML =
-          routes[route] || "<h1>404 - Page Not Found</h1>";
-      }
+            <h3 class="sub-title">What I Do</h3>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="svc-icon-wrap"><img src="./svg/web-development.svg" alt="Web Development" /></div>
+                <h4>Web Development</h4>
+                <p>Building responsive, performant web apps using React, Node.js and modern tooling.</p>
+              </div>
+              <div class="service-card">
+                <div class="svc-icon-wrap"><img src="./svg/Java.svg" alt="DSA in Java" /></div>
+                <h4>DSA in Java</h4>
+                <p>Solving complex algorithmic problems with optimised data structures in Java.</p>
+              </div>
+              <div class="service-card">
+                <div class="svc-icon-wrap"><img src="./svg/open source.svg" alt="Open Source" /></div>
+                <h4>Open Source</h4>
+                <p>Contributing to the open source community and collaborating on GitHub projects.</p>
+              </div>
+            </div>
 
-      // Load the home page content by default
-      navigate("about");
-    </script>
+            <h3 class="sub-title">Tech Stack</h3>
+            <div class="tech-cloud">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">Socket.io</span>
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">Bootstrap</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Git / GitHub</span>
+              <span class="tech-pill">WebRTC</span>
+              <span class="tech-pill">REST APIs</span>
+            </div>
+          </section>
+
+          <!-- PROJECTS -->
+          <section class="page-section" id="sec-project">
+            <div class="section-header">
+              <h2 class="section-title">My <span class="accent">Projects</span></h2>
+              <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="./images/video.png" alt="Video Conferencing App" />
+                  <div class="project-overlay">
+                    <a href="https://web-rtc-client-repo.vercel.app/" target="_blank" rel="noopener" class="overlay-live-btn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>WebRTC</span><span>Socket.io</span><span>Node.js</span></div>
+                  <h3>Video Conferencing</h3>
+                  <p>Real-time peer-to-peer video conferencing with secure rooms, screen sharing, and live chat.</p>
+                  <a href="https://web-rtc-client-repo.vercel.app/" target="_blank" rel="noopener" class="project-cta">View Live <span>&#8594;</span></a>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="./images/Trading.jpg" alt="Trading Platform" />
+                  <div class="project-overlay">
+                    <a href="https://zerodha-frontend-repo.vercel.app/" target="_blank" rel="noopener" class="overlay-live-btn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                  <h3>Trading Platform</h3>
+                  <p>Full-featured trading platform with real-time market data, portfolio management, and seamless transactions.</p>
+                  <a href="https://zerodha-frontend-repo.vercel.app/" target="_blank" rel="noopener" class="project-cta">View Live <span>&#8594;</span></a>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img-wrap">
+                  <img src="./images/chat.jpg" alt="Chat Application" />
+                  <div class="project-overlay">
+                    <a href="https://chat-frontend-repo.vercel.app" target="_blank" rel="noopener" class="overlay-live-btn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>Socket.io</span><span>Express</span><span>MongoDB</span></div>
+                  <h3>Real-time Chat App</h3>
+                  <p>Instant messaging with custom rooms, real-time notifications, and a polished user experience.</p>
+                  <a href="https://chat-frontend-repo.vercel.app" target="_blank" rel="noopener" class="project-cta">View Live <span>&#8594;</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- RESUME -->
+          <section class="page-section" id="sec-resume">
+            <div class="section-header">
+              <h2 class="section-title">My <span class="accent">Resume</span></h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <a href="assets/resume.pdf" download="Upen_Choudhary_Resume.pdf" class="download-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+
+            <div class="resume-layout">
+              <div class="resume-col">
+                <h3 class="resume-col-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  Education
+                </h3>
+                <div class="timeline">
+                  <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                      <span class="tl-year">2022 &ndash; 2026</span>
+                      <h4>B.Tech &mdash; Computer Science</h4>
+                      <p>GLA University, Mathura</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="resume-col-title" style="margin-top:2.2rem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                  Certifications
+                </h3>
+                <div class="timeline">
+                  <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                      <h4>DSA &amp; Development</h4>
+                      <p>Apna College</p>
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                      <h4>Software Engineering</h4>
+                      <p>NPTEL</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resume-col">
+                <h3 class="resume-col-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Technical Skills
+                </h3>
+                <div class="skills-list">
+                  <div class="skill-row">
+                    <div class="skill-meta"><span>JavaScript / React</span><span>90%</span></div>
+                    <div class="skill-track"><div class="skill-bar" data-w="90"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-meta"><span>Node.js / Express</span><span>85%</span></div>
+                    <div class="skill-track"><div class="skill-bar" data-w="85"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-meta"><span>MongoDB</span><span>80%</span></div>
+                    <div class="skill-track"><div class="skill-bar" data-w="80"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-meta"><span>Java / DSA</span><span>75%</span></div>
+                    <div class="skill-track"><div class="skill-bar" data-w="75"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-meta"><span>Git / GitHub</span><span>85%</span></div>
+                    <div class="skill-track"><div class="skill-bar" data-w="85"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-meta"><span>WebRTC / Socket.io</span><span>78%</span></div>
+                    <div class="skill-track"><div class="skill-bar" data-w="78"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CONTACT -->
+          <section class="page-section" id="sec-contact">
+            <div class="section-header">
+              <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+              <div class="title-underline"></div>
+            </div>
+            <p class="contact-intro">Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+            <div class="contact-layout">
+              <div class="contact-cards-col">
+                <a href="mailto:upenchoudhary100@gmail.com" class="cinfo-card">
+                  <div class="cinfo-icon"><img src="./svg/email.svg" alt="Email" /></div>
+                  <div>
+                    <span class="cinfo-label">Email</span>
+                    <span class="cinfo-val">upenchoudhary100@gmail.com</span>
+                  </div>
+                </a>
+                <a href="tel:+917248119519" class="cinfo-card">
+                  <div class="cinfo-icon"><img src="./svg/phone.svg" alt="Phone" /></div>
+                  <div>
+                    <span class="cinfo-label">Phone</span>
+                    <span class="cinfo-val">(+91) 7248119519</span>
+                  </div>
+                </a>
+                <div class="cinfo-card">
+                  <div class="cinfo-icon"><img src="./svg/location.svg" alt="Location" /></div>
+                  <div>
+                    <span class="cinfo-label">Location</span>
+                    <span class="cinfo-val">Mathura, India</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Formspree: registered with chaudharyuday1515@gmail.com -->
+              <form action="https://formspree.io/f/xdkelwyo" method="POST" class="contact-form" id="contact-form">
+                <div class="form-row">
+                  <div class="float-group">
+                    <input type="text" name="name" id="f-name" placeholder=" " required autocomplete="off" />
+                    <label for="f-name">Your Name</label>
+                  </div>
+                  <div class="float-group">
+                    <input type="email" name="email" id="f-email" placeholder=" " required autocomplete="off" />
+                    <label for="f-email">Your Email</label>
+                  </div>
+                </div>
+                <div class="float-group">
+                  <textarea name="message" id="f-msg" placeholder=" " rows="5" required></textarea>
+                  <label for="f-msg">Your Message</label>
+                </div>
+                <button type="submit" class="form-send-btn">
+                  <span>Send Message</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </form>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
